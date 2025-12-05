@@ -1,0 +1,52 @@
+{
+  "name": "@khangnguyen1702/cart-ui",
+  "version": "1.0.18",
+  "description": "A React cart UI component library",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src/ui/modal.css",
+    "src/product/product-card.css"
+  ],
+  "scripts": {
+    "build": "tsc && npm run copy-css",
+    "copy-css": "copyfiles -u 1 \"src/**/*.css\" dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "cart",
+    "ui",
+    "components",
+    "typescript",
+    "graphql"
+  ],
+  "author": "Nguyen Minh Khang <khangnguyen1702@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khangnguyen1702/cart-ui"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "tailwindcss": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  }
+}

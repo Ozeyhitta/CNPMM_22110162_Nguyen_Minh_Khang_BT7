@@ -1,0 +1,62 @@
+/* Fade overlay */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* Slide modal content */
+.modal-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 90vh;
+  width: 100%;
+  position: relative;
+
+  animation: slideIn 0.25s ease-out;
+}
+
+/* Close button */
+.modal-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+}
+
+.modal-close-btn:hover {
+  color: #000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

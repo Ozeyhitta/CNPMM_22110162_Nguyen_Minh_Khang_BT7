@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useCart, CartList, ProductCard } from "./lib";
 import { ProductAPI } from "./graphql/product.api";
 
@@ -68,6 +69,16 @@ function App() {
                   </span>
                 )}
               </div>
+
+              {/* Admin Button */}
+              <Link
+                to="/admin"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-sm font-medium rounded-lg transition-all duration-200 shadow-sm hover:shadow-md transform hover:scale-105 active:scale-95"
+                title="Quản lý sản phẩm"
+              >
+                <span className="animate-spin-slow">⚙️</span>
+                <span className="hidden sm:inline">Admin</span>
+              </Link>
 
               {/* Mobile Cart Icon */}
               <div className="sm:hidden relative">
